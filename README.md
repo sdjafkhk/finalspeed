@@ -11,14 +11,10 @@ iptables -I OUTPUT -p tcp --sport 端口号 -j ACCEPT
 service iptables save
 2.不熟悉不要乱改配置,如果无法连接,请卸载后一键安装,不要做任何修改,按照教程操作.
 
-一键安装
-
+### 一键安装
 rm -f install_fs.sh
-
 wget  https://raw.githubusercontent.com/zhuanshicong/finalspeed/master/install_fs.sh
-
 chmod +x install_fs.sh
-
 ./install_fs.sh 2>&1 | tee install.log
 
 debian,ubuntu下如果执行脚本出错,请切换到dash,
