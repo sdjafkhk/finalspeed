@@ -55,7 +55,7 @@ debian,ubuntu下如果执行脚本出错,请切换到dash,
        vi /etc/rc.local
 加入<br>
       sh /fs/start.sh
-每天晚上3点自动重启
+每天晚上3点自动重启<br>
       crontab -e
 加入<br>
        0 3 * * *  sh /fs/restart.sh
