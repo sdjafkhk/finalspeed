@@ -53,13 +53,12 @@ debian,ubuntu下如果执行脚本出错,请切换到dash,
 ### 设置开机启动
       chmod +x /etc/rc.local
        vi /etc/rc.local
-加入<br>  
+加入
 ###  
        sh /fs/start.sh
 
-每天晚上3点自动重启<br>
-### 
+### 每天晚上3点自动重启
        crontab -e
-加入<br>
+加入
 ### 
        0 3 * * *  sh /fs/restart.sh
