@@ -13,8 +13,11 @@ service iptables save
 
 一键安装
 rm -f install_fs.sh
+
 wget  https://raw.githubusercontent.com/zhuanshicong/finalspeed/master/install_fs.sh
+
 chmod +x install_fs.sh
+
 ./install_fs.sh 2>&1 | tee install.log
 
 debian,ubuntu下如果执行脚本出错,请切换到dash,
