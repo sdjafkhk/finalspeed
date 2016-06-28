@@ -1,21 +1,21 @@
-# finalspeed
-finalspeed1.2
+# Finalspeed 1.2
+
 FinalSpeed服务端Linux版,支持Centos,Ubuntu,Debian
 
-注意问题
-1.服务端会启动iptables,如果服务器修改过ssh端口,请先开放ssh端口,否则可能导致ssh连接失败.
-开放端口命令
-service iptables start
-iptables -I INPUT -p tcp --dport 端口号 -j ACCEPT
-iptables -I OUTPUT -p tcp --sport 端口号 -j ACCEPT
-service iptables save
+### 注意问题
+   1.服务端会启动iptables,如果服务器修改过ssh端口,请先开放ssh端口,否则可能导致ssh连接失败.
+#### 开放端口命令
+     service iptables start
+     iptables -I INPUT -p tcp --dport 端口号 -j ACCEPT
+     iptables -I OUTPUT -p tcp --sport 端口号 -j ACCEPT
+     service iptables save
 2.不熟悉不要乱改配置,如果无法连接,请卸载后一键安装,不要做任何修改,按照教程操作.
 
 ### 一键安装
-rm -f install_fs.sh
-wget  https://raw.githubusercontent.com/zhuanshicong/finalspeed/master/install_fs.sh
-chmod +x install_fs.sh
-./install_fs.sh 2>&1 | tee install.log
+    rm -f install_fs.sh
+    wget  https://raw.githubusercontent.com/zhuanshicong/finalspeed/master/install_fs.sh
+    chmod +x install_fs.sh
+    ./install_fs.sh 2>&1 | tee install.log
 
 debian,ubuntu下如果执行脚本出错,请切换到dash,
 切换方法: sudo dpkg-reconfigure dash 选no
